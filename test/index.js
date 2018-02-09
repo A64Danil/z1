@@ -106,7 +106,7 @@ describe('ДЗ 1 - функции', () => {
 
         it('должна привязывать любое кол-во аргументов возвращаемой функции', () => {
 
-            let result = bindFunction(fn, ...valuesArr);
+            let result = bindFunction(fn, ...valuesArr);cd
 
             assert.equal(result(), valuesArr.join(''));
         });

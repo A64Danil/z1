@@ -16,7 +16,8 @@ function returnFirstArgument(arg) {
  Значение по умолчанию второго аргумента должно быть 100
  */
 function defaultParameterValue(a, b) {
-
+    if(!b) {b = 100;}
+    return a + b;
 }
 
 
@@ -27,8 +28,13 @@ function defaultParameterValue(a, b) {
  Количество переданных аргументов заранее неизвестно
  */
 function returnArgumentsArray() {
-
+    var massiv = [];
+    for (var i=0; i < arguments.length; i++) {
+        massiv.push(arguments[i]);
+    }
+    return massiv;
 }
+
 
 
 
@@ -38,7 +44,7 @@ function returnArgumentsArray() {
  Функция должна принимать другую функцию и возвращать результат вызова переданной функции
  */
 function returnFnResult(fn) {
-
+    return fn();
 }
 
 /*

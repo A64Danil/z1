@@ -1,83 +1,35 @@
-/* ДЗ 1 - Функции */
+console.log('My own test are starting.');
 
-/*
- Задание 1:
+//2 of 6
 
- Функция должна принимать один аргумент и возвращать его
- */
-function returnFirstArgument(arg) {
-    return arg;
-}
-
-/*
- Задание 2:
-
- Функция должна принимать два аргумента и возвращать сумму переданных значений
- Значение по умолчанию второго аргумента должно быть 100
- */
 function defaultParameterValue(a, b) {
-
+    if(!b) {b = 100;}
+    return a + b;
 }
 
+//console.log(defaultParameterValue(10, 20));
+//console.log(defaultParameterValue(10));
 
-/*
- Задание 3:
 
- Функция должна возвращать все переданные в нее аргументы в виде массива
- Количество переданных аргументов заранее неизвестно
- */
+// 3 of 6
 function returnArgumentsArray() {
 
+    var massiv = [];
+    for (var i=0; i < arguments.length; i++) {
+        massiv.push(arguments[i]);
+        //console.log(arguments[i]);
+    }
+    return massiv;
 }
 
+//console.log(returnArgumentsArray(2,3,4));
+//returnArgumentsArray(2,3,4);
 
-
-/*
- Задание 4:
-
- Функция должна принимать другую функцию и возвращать результат вызова переданной функции
- */
+// 4 of 6
 function returnFnResult(fn) {
-
+    return fn();
 }
 
-/*
- Задание 5:
-
- Функция должна принимать число (значение по умолчанию - 0) и возвращать функцию (F)
- При вызове F, переданное число должно быть увеличено на единицу и возвращено из F
- */
-function returnCounter(number) {
-
-}
-
-
-
-/*
- Задание 6 *:
- https://learn.javascript.ru/bind#bind
- https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
- https://www.youtube.com/watch?v=OaR9Go75hOY
- https://www.youtube.com/watch?v=7oB57sW5Fho
- ==основное назначение метода bind() в том, чтобы связать (bind) функцию с объектом. Если вызвать метод bind() функции func и
- передать ему объект obj, он вернет новую функцию. Вызов новой функции (как обычной функции) выполнит вызов оригинальной функции func
- как метода объекта obj. Любые аргументы, переданные новой функции, будут переданы оригинальной функции.
- ===
- Функция должна принимать другую функцию (F) и некоторое количество дополнительных аргументов
- Функция должна привязать переданные аргументы к функции F и вернуть получившуюся функцию
- */
-function bindFunction(F, a, b, c) {
-
-    return F;
-}
-
-
-
-export {
-    returnFirstArgument,
-    defaultParameterValue,
-    returnArgumentsArray,
-    returnFnResult,
-    returnCounter,
-    bindFunction
-}
+console.log(returnFnResult(function(){
+    return 1;
+}));
