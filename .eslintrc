@@ -15,7 +15,7 @@
   "rules": {
     "no-cond-assign": "off",
     "space-before-blocks": "error",
-    "spaced-comment": "error",
+    "spaced-comment": "off",
     "curly": "error",
     "guard-for-in": "error",
     "no-caller": "error",
