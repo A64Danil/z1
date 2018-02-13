@@ -75,33 +75,10 @@ function returnCounter(number) {
  Функция должна принимать другую функцию (F) и некоторое количество дополнительных аргументов
  Функция должна привязать переданные аргументы к функции F и вернуть получившуюся функцию
  */
-function bindFunction(fn, a, b, c) {
-    let F;
-    let someShit = {
-        var1 : a,
-        var2 : b,
-        var3 : c,
-    }
-
-    F = fn.bind(null, a, b, c);
-
-    return F;
+function bindFunction(fn,...args) {
+    return fn.bind(null, ...args);
 }
 
-
-function fy () {
-    var res = this.var1;
-    res += this.var2;
-    res += this.var3;
-    return res;
-}
-
-// вместо
-// var g = bind(fy, "Context");
-//var g = fy.bind("Context");
-//g(); // Context
-
-bindFunction(fy, 1, 1, 10);
 
 
 export {

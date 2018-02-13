@@ -67,19 +67,8 @@ function returnCounter(number) {
  Функция должна привязать переданные аргументы к функции F и вернуть получившуюся функцию
  */
 function bindFunction(fn, ...args) {
-
-    console.log(...args);
-
-
-    let someShit = {
-        //var1 : a,
-        //var2 : b,
-        //var3 : c,
-        }
-
-    F = fn.bind(someShit, ...args);
-
-    return F();
+    F = fn.bind(null, ...args);
+    return F;
 }
 
 
@@ -88,10 +77,5 @@ function fy () {
     return res;
 }
 
-// вместо
-// var g = bind(fy, "Context");
-//var g = fy.bind("Context");
-//g(); // Context
 
 console.log(bindFunction(fy, 1, 3, 10));
-//bindFunction();
